@@ -1,0 +1,38 @@
+{
+    "arobj"     : {
+        "cid"      : "0000",
+        "tid"      : "0102",
+        "arurl"    : "https://pintar.tech/clid0000/tgid0102.ar.jpg",
+        "thumburl" : "https://pintar.tech/clid0000/tgid0102.tmb.jpg"
+    },
+    
+    "pictframe"  : null,
+    "info"       : null,
+    "a3d"        : [{
+    			    "a3durl"      : "https://pintar.tech/clid0000/tgid0102.ab",
+    			    "audiourl"    : "https://pintar.tech/clid0000/tgid0001.3d.mp3",
+    			    "pos"         : null,
+    			    "rot"         : null,
+			    "scl"	  : [0.03, 0.03, 0.03]
+		    },
+		    {
+    			    "a3durl"      : "https://pintar.tech/clid0000/tgid0001.ab",
+    			    "audiourl"    : null,
+    			    "pos"         : null,
+    			    "rot"         : null,
+			    "scl"	  : null
+		     },
+		     {
+    			    "a3durl"      : "https://pintar.tech/clid0000/tgid0008.ab",
+    			    "audiourl"    : null,
+    			    "pos"         : null,
+    			    "rot"         : [90, 0, 0],
+			    "scl"	  : [0.2, 0.2, 0.2]
+		    }],
+    "anim"	 : null,
+    "txrvideo"   : null,
+    "feedback"   : null,
+    "callback"	 : null,
+    "link"       : null,
+    "audio"      : null
+}

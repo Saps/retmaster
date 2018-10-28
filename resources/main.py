@@ -3,6 +3,7 @@ from flask import request, session, redirect, url_for, json
 
 from api import ini_api as inapi
 from api import MCFG
+import json
 
 class MainResource():
 
@@ -60,4 +61,20 @@ class MainResource():
 
 
     def checkImage(self):
-        pass
+        ar = {}
+        ar['cid'] = "0000"
+        ar['tid'] = "0102"
+        return json.dumps(ar)
+
+
+    def checkImage2(self):
+        return '''
+            <!doctype html>
+            <title>Upload new File</title>
+            <h1>Проверка работы алгоритма</h1>
+            <form method=post enctype=multipart/form-data>
+              <input type=file name=file>
+              <input type=submit value=Upload>
+            </form>
+            '''
+

@@ -2,6 +2,7 @@
 from flask import Blueprint
 from .main import MainResource
 from tools import login_required
+from flask import request
 
 resrc = Blueprint('resrc', __name__,
                   template_folder='templates')
@@ -28,9 +29,12 @@ def logoutWindow():
 def mainWindow():
     return p.mainPage()
 
-@resrc.route('/check')
+@resrc.route('/check',methods=['GET', 'POST'])
 def checkImage():
-    return p.checkImage()
+    if request.method == 'POST':
+        return p.checkImage()
+    else:
+        return p.checkImage2()
 
 
 @resrc.route('/<path:command>', methods=['GET', 'POST'])

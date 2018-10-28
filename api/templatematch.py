@@ -20,4 +20,4 @@ def recogniseImage(images, template):
             elif max_val > final_max:
                 final_max = max_val
         id_maxValue[image.id] = image.value 
-    return max(id_maxValue.iterkeys(), key=(lamda key: id_maxValue[key]));
+    return max(id_maxValue.iterkeys(), key=(lambda key: id_maxValue[key]));
