@@ -8,7 +8,6 @@ import json
 class MainResource():
 
     def defaultPage(self):
-        return render_template('main.html',)
         return redirect(url_for('resrc.loginWindow'))
 
     def loginWindow(self):
@@ -57,7 +56,9 @@ class MainResource():
             return redirect(url_for('resrc.loginWindow')) #, next=request.url))
         if not MCFG.checkSessionID(session['sess_id']):
             return redirect(url_for('resrc.loginWindow'))  # , next=request.url))
-        return "<H1>IN MAIN</H1>"
+        return render_template('main.html',)
+
+        #return "<H1>IN MAIN</H1>"
 
 
     def checkImage(self):
