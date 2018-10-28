@@ -62,9 +62,19 @@ class MainResource():
 
 
     def checkImage(self):
+        if 'file' not in request.files:
+            return redirect(request.url)
+        file = request.files['file']
         ar = {}
-        ar['cid'] = "0000"
-        ar['tid'] = "0102"
+
+        #import templatematch
+        #templatematch.recogniseImage(???????????)
+        if file.filename[0]=='x':
+            ar['cid'] = "0001"
+            ar['tid'] = "0102"
+        else:
+            ar['cid'] = "0000"
+            ar['mess'] = "Error: no file found"
         return json.dumps(ar)
 
 
